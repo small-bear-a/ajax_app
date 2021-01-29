@@ -9,6 +9,7 @@ function check() {
       const postId = post.getAttribute("data-id");
       const XHR = new XMLHttpRequest();
       XHR.open("GET", `/posts/${postId}`, true);
+      // ↑ルーティングに対応したリクエストを送る準備をしている
       XHR.responseType = "json";
       XHR.send();
       XHR.onload = () => {
